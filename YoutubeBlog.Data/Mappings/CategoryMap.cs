@@ -10,7 +10,7 @@ namespace YoutubeBlog.Data.Mappings
             builder.HasData(new Category
             {
                 Id = Guid.Parse("9D79512D-F19C-4872-982E-FC982916DF52"),
-                Name = "ASP .NET Core",
+                Name = "ASP.NET Core",
                 CreatedBy = "Admin Test",
                 CreatedDate = DateTime.Now,
                 IsDeleted = false

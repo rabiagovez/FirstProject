@@ -16,6 +16,7 @@
         <div class="card">
             <h5 class="card-header"></h5>
             <form asp-controller="Article" asp-action="Update" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly"></div>
                 <div class="card-body">
                     <input type="hidden" asp-for="Id" />
                     <label asp-for="CategoryId" class="form-label">Category</label>
@@ -27,10 +28,12 @@
                     <div class="form-group">
                         <label asp-for="Title" class="form-label">Title</label>
                         <input asp-for="Title" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the title" aria-describedby="defaultFormControlHelp">
+                        <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Content" class="form-label">Content</label>
                         <textarea asp-for="Content" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the content" aria-describedby="defaultFormControlHelp" style="min-height:300px"></textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
