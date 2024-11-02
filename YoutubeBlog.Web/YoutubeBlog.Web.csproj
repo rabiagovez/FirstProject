@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\sneat-1.0.0\**" />
+    <Compile Remove="wwwroot\sneat1\**" />
+    <Content Remove="wwwroot\sneat-1.0.0\**" />
+    <Content Remove="wwwroot\sneat1\**" />
+    <EmbeddedResource Remove="wwwroot\sneat-1.0.0\**" />
+    <EmbeddedResource Remove="wwwroot\sneat1\**" />
+    <None Remove="wwwroot\sneat-1.0.0\**" />
+    <None Remove="wwwroot\sneat1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.33" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.33">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YoutubeBlog.Data\YoutubeBlog.Data.csproj" />
+    <ProjectReference Include="..\YoutubeBlog.Service\YoutubeBlog.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\sneat\" />
+  </ItemGroup>
+
+</Project>

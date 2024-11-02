@@ -1,0 +1,39 @@
+﻿@model ArticleAddDto
+
+<div class="container-xxl flex-grow-1 container-p-y">
+
+    
+        <h5 class="fw-bold  py-3 mb-4">
+            <span class="text-muted fw-light">Article Managament / </span>Add Article</h5>
+
+    <div class="row g-4">
+        <div class="col-md-12">
+            <div class="card">
+                <h5 class="card-header"></h5>
+                <form asp-controller="Article" asp-action="Add" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                        <label asp-for="CategoryId" class="form-label">Category</label>
+                        <div class="form-group mb-3">
+                        <select id="categoryList" asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id","Name"))"></select>
+                        @* Hata aldığımızda ekrana gösterilecek alan *@
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+                     <div class="form-group">
+                        <label asp-for="Title" class="form-label">Title</label>
+                            <input asp-for="Title" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the title" aria-describedby="defaultFormControlHelp">
+                        </div>
+                    <div class="form-group">
+                        <label asp-for="Content" class="form-label">Content</label>
+                            <textarea asp-for="Content" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the content" aria-describedby="defaultFormControlHelp" style="min-height:300px"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Save</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+      
+
+</div>
