@@ -4,7 +4,7 @@
 
     
         <h5 class="fw-bold  py-3 mb-4">
-            <span class="text-muted fw-light">Article Managament / </span>Add Article</h5>
+            <span class="text-muted fw-light">Makale Yönetimi / </span>Makale Ekle</h5>
 
     <div class="row g-4">
         <div class="col-md-12">
@@ -13,25 +13,25 @@
                 <form asp-controller="Article" asp-action="Add" method="post" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly"></div>
                 <div class="card-body">
-                        <label asp-for="CategoryId" class="form-label">Category</label>
+                        <label asp-for="CategoryId" class="form-label">Kategori</label>
                         <div class="form-group mb-3">
                         <select id="categoryList" asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories, "Id","Name"))"></select>
                         @* Hata aldığımızda ekrana gösterilecek alan *@
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
                      <div class="form-group">
-                        <label asp-for="Title" class="form-label">Title</label>
+                        <label asp-for="Title" class="form-label">Başlık</label>
                             <input asp-for="Title" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the title" aria-describedby="defaultFormControlHelp">
                             <span asp-validation-for="Title" class="text-danger"></span>
                         </div>
                     <div class="form-group">
-                        <label asp-for="Content" class="form-label">Content</label>
+                        <label asp-for="Content" class="form-label">İçerik</label>
                             <textarea asp-for="Content" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the content" aria-describedby="defaultFormControlHelp" style="min-height:300px"></textarea>
                             <span asp-validation-for="Content" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Save</button>
+                        <button type="submit" class="btn btn-primary btn-block">Kaydet</button>
                     </div>
                 </div>
                 </form>

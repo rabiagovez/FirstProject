@@ -4297,12 +4297,17 @@ textarea.form-control-lg {
   }
 }
 
+.my-edit {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .list-group {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.5rem;
 }
 
 .list-group-numbered {
@@ -13557,7 +13562,7 @@ button.list-group-item-gray.active {
 }
 
 .text-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .rounded-end {
