@@ -26,16 +26,26 @@
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Title" class="form-label">Başlık</label>
+                        <label asp-for="Title" id="defaultFormControlInput" class="form-label">Başlık</label>
                         <input asp-for="Title" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the title" aria-describedby="defaultFormControlHelp">
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Content" class="form-label">İçerik</label>
+                        <label asp-for="Content" id="defaultFormControlInput" class="form-label">İçerik</label>
                         <textarea asp-for="Content" type="text" class="form-control mb-3" id="defaultFormControlInput" placeholder="Please enter the content" aria-describedby="defaultFormControlHelp" style="min-height:300px"></textarea>
                         <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                    <div class="row">
+                    <div class="form-group col-md-3">
+                         <label asp-for="Image.FileName" id="defaultFormControlInput" class="form-label d-block">Mevcut resim</label>
+                         <img style="width:20em" class="mb-3" src="~/images/@Model.Image.FileName" alt="@Model.Title" />
                     </div>
-
+                            <div class="form-group col-md-7">
+                         <label asp-for="Photo" class="form-label">Resim seçiniz</label>
+                         <input asp-for="Photo" type="file" accept="image/*" class="form-control mb-3" id="defaultFormControlInput" aria-describedby="defaultFormControlHelp">
+                         <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+                    </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Kaydet</button>
                     </div>
